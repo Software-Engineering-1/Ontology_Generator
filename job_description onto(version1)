@@ -1,0 +1,775 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Time_Ontology "http://mccarthy.dia.fi.upm.es/Time_Ontology#" >
+    <!ENTITY Job_Offer_Ontology "http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#" >
+    <!ENTITY Geography_Ontology "http://mccarthy.dia.fi.upm.es/Geography_Ontology#" >
+    <!ENTITY Education_Ontology "http://mccarthy.dia.fi.upm.es/Education_Ontology#" >
+    <!ENTITY Occupation_Ontology "http://mccarthy.dia.fi.upm.es/Occupation_Ontology#" >
+    <!ENTITY Competence_Ontology "http://mccarthy.dia.fi.upm.es/Competence_Ontology#" >
+    <!ENTITY Compensation_Ontology "http://mccarthy.dia.fi.upm.es/Compensation_Ontology#" >
+    <!ENTITY Economic_Activity_Ontology "http://mccarthy.dia.fi.upm.es/Economic_Activity_Ontology#" >
+    <!ENTITY Labour_Regulatory_Ontology "http://mccarthy.dia.fi.upm.es/Labour_Regulatory_Ontology#" >
+]>
+
+
+<rdf:RDF xmlns="file:/home/ajrockr/Project%20Files/ttl/JobOfferOntology.ttl#"
+     xml:base="file:/home/ajrockr/Project%20Files/ttl/JobOfferOntology.ttl"
+     xmlns:Geography_Ontology="http://mccarthy.dia.fi.upm.es/Geography_Ontology#"
+     xmlns:Time_Ontology="http://mccarthy.dia.fi.upm.es/Time_Ontology#"
+     xmlns:Occupation_Ontology="http://mccarthy.dia.fi.upm.es/Occupation_Ontology#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Competence_Ontology="http://mccarthy.dia.fi.upm.es/Competence_Ontology#"
+     xmlns:Economic_Activity_Ontology="http://mccarthy.dia.fi.upm.es/Economic_Activity_Ontology#"
+     xmlns:Labour_Regulatory_Ontology="http://mccarthy.dia.fi.upm.es/Labour_Regulatory_Ontology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Compensation_Ontology="http://mccarthy.dia.fi.upm.es/Compensation_Ontology#"
+     xmlns:Job_Offer_Ontology="http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#"
+     xmlns:Education_Ontology="http://mccarthy.dia.fi.upm.es/Education_Ontology#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Address -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Address">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Begin_date -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Begin_date">
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Time_specification"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#End_date -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;End_date">
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Time_specification"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Fax -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Fax">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Full_Name -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Full_Name">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Id -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Id">
+        <owl:objectPropertyDomain rdf:resource="&Job_Offer_Ontology;How_To_Apply"/>
+        <owl:objectPropertyRange rdf:resource="&xsd;integer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Identifier -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Identifier">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Max_age -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Max_age">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Min_age -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Min_age">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Postal_Code -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Postal_Code">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Telephone -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Telephone">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Work_Location -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Work_Location">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Years -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;Years">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Requested_Work_Experience"/>
+        <rdfs:range rdf:resource="&Time_Ontology;Year"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#anonymous -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;anonymous">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Job_Vacancy"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#belongs_to -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;belongs_to">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;How_To_Apply"/>
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Job_Vacancy"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Job_Vacancy"/>
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Organization"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#belongs_to_begin_date -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;belongs_to_begin_date">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Time_specification"/>
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#belongs_to_end_date -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;belongs_to_end_date">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Time_specification"/>
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#contact_person -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;contact_person">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#date -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;date">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Fixed_date"/>
+        <rdfs:range rdf:resource="&Time_Ontology;DateTimeDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#dates -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;dates">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Interval"/>
+        <rdfs:range rdf:resource="&Time_Ontology;DateTimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#description -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;description">
+        <owl:objectPropertyDomain rdf:resource="&Job_Offer_Ontology;How_To_Apply"/>
+        <owl:objectPropertyRange rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#duration -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;duration">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&Time_Ontology;DurationDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#email -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;email">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Organization"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#employment_agent -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;employment_agent">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Job_Vacancy"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#has_activity_sector -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;has_activity_sector">
+        <rdfs:range rdf:resource="&Economic_Activity_Ontology;Sector"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Requested_Work_Experience"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#has_compensation -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;has_compensation">
+        <rdfs:range rdf:resource="&Compensation_Ontology;Compensation"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#has_contract_type -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;has_contract_type">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&Labour_Regulatory_Ontology;Contract_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#has_education -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;has_education">
+        <rdfs:range rdf:resource="&Education_Ontology;Education"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#has_elems -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;has_elems">
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Elem"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;JV_List"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#has_job_category -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;has_job_category">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;ICT_Vacancy"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Requested_Work_Experience"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&Occupation_Ontology;Computing_professionals__213"/>
+        <rdfs:range rdf:resource="&Occupation_Ontology;Occupation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#has_job_vacancy -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;has_job_vacancy">
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Job_Vacancy"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#has_pos -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;has_pos">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Elem"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#has_vacancy -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;has_vacancy">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Job_Vacancy"/>
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#has_value -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;has_value">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Elem"/>
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Job_Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#has_work_condition -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;has_work_condition">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&Labour_Regulatory_Ontology;Work_Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#how_to_apply -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;how_to_apply">
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;How_To_Apply"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Job_Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#is_associated_with -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;is_associated_with">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Requested_Work_Experience"/>
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#is_located_in -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;is_located_in">
+        <rdfs:range rdf:resource="&Geography_Ontology;Location"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Organization"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#job_description -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;job_description">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#job_name -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;job_name">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#number_workers -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;number_workers">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Organization"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#publication_date -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;publication_date">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Job_Vacancy"/>
+        <rdfs:range rdf:resource="&Time_Ontology;DateTimeDescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#requires_car -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;requires_car">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#requires_competence -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;requires_competence">
+        <rdfs:range rdf:resource="&Competence_Ontology;Competence"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#requires_flexibility_to_travel -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;requires_flexibility_to_travel">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#requires_professional_affiliation -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;requires_professional_affiliation">
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+        <rdfs:range rdf:resource="&Occupation_Ontology;Occupation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#requires_work_experience -->
+
+    <owl:ObjectProperty rdf:about="&Job_Offer_Ontology;requires_work_experience">
+        <rdfs:range rdf:resource="&Job_Offer_Ontology;Requested_Work_Experience"/>
+        <rdfs:domain rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Id -->
+
+    <owl:DatatypeProperty rdf:about="&Job_Offer_Ontology;Id"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#description -->
+
+    <owl:DatatypeProperty rdf:about="&Job_Offer_Ontology;description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Compensation_Ontology#Compensation -->
+
+    <owl:Class rdf:about="&Compensation_Ontology;Compensation"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Competence_Ontology#Competence -->
+
+    <owl:Class rdf:about="&Competence_Ontology;Competence"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Economic_Activity_Ontology#Sector -->
+
+    <owl:Class rdf:about="&Economic_Activity_Ontology;Sector"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Education_Ontology#Education -->
+
+    <owl:Class rdf:about="&Education_Ontology;Education"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Geography_Ontology#Location -->
+
+    <owl:Class rdf:about="&Geography_Ontology;Location"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Elem -->
+
+    <owl:Class rdf:about="&Job_Offer_Ontology;Elem"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Fixed_date -->
+
+    <owl:Class rdf:about="&Job_Offer_Ontology;Fixed_date">
+        <rdfs:subClassOf rdf:resource="&Job_Offer_Ontology;Time_specification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#How_To_Apply -->
+
+    <owl:Class rdf:about="&Job_Offer_Ontology;How_To_Apply"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#ICT_Vacancy -->
+
+    <owl:Class rdf:about="&Job_Offer_Ontology;ICT_Vacancy">
+        <rdfs:subClassOf rdf:resource="&Job_Offer_Ontology;Vacancy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Interval -->
+
+    <owl:Class rdf:about="&Job_Offer_Ontology;Interval">
+        <rdfs:subClassOf rdf:resource="&Job_Offer_Ontology;Time_specification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#JV_List -->
+
+    <owl:Class rdf:about="&Job_Offer_Ontology;JV_List"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Job_Vacancy -->
+
+    <owl:Class rdf:about="&Job_Offer_Ontology;Job_Vacancy"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Organization -->
+
+    <owl:Class rdf:about="&Job_Offer_Ontology;Organization"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Requested_Work_Experience -->
+
+    <owl:Class rdf:about="&Job_Offer_Ontology;Requested_Work_Experience"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Time_specification -->
+
+    <owl:Class rdf:about="&Job_Offer_Ontology;Time_specification"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Vacancy -->
+
+    <owl:Class rdf:about="&Job_Offer_Ontology;Vacancy"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Labour_Regulatory_Ontology#Contract_Type -->
+
+    <owl:Class rdf:about="&Labour_Regulatory_Ontology;Contract_Type"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Labour_Regulatory_Ontology#Work_Condition -->
+
+    <owl:Class rdf:about="&Labour_Regulatory_Ontology;Work_Condition"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Occupation_Ontology#Computing_professionals__213 -->
+
+    <owl:Class rdf:about="&Occupation_Ontology;Computing_professionals__213"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Occupation_Ontology#Occupation -->
+
+    <owl:Class rdf:about="&Occupation_Ontology;Occupation"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Time_Ontology#DateTimeDescription -->
+
+    <owl:Class rdf:about="&Time_Ontology;DateTimeDescription"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Time_Ontology#DateTimeInterval -->
+
+    <owl:Class rdf:about="&Time_Ontology;DateTimeInterval"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Time_Ontology#DurationDescription -->
+
+    <owl:Class rdf:about="&Time_Ontology;DurationDescription"/>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Time_Ontology#Year -->
+
+    <owl:Class rdf:about="&Time_Ontology;Year"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#boolean -->
+
+    <owl:Class rdf:about="&xsd;boolean"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#integer -->
+
+    <owl:Class rdf:about="&xsd;integer"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <owl:Class rdf:about="&xsd;string"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Appointment_set_by_employer -->
+
+    <Job_Offer_Ontology:How_To_Apply rdf:about="&Job_Offer_Ontology;Appointment_set_by_employer">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <Job_Offer_Ontology:Id rdf:datatype="&xsd;integer">6</Job_Offer_Ontology:Id>
+        <Job_Offer_Ontology:description rdf:datatype="&xsd;string"
+            >Appointment set by employer - see free text</Job_Offer_Ontology:description>
+    </Job_Offer_Ontology:How_To_Apply>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Letter_plus_CV_to_CONTACT_EA -->
+
+    <Job_Offer_Ontology:How_To_Apply rdf:about="&Job_Offer_Ontology;Letter_plus_CV_to_CONTACT_EA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <Job_Offer_Ontology:Id rdf:datatype="&xsd;integer">1</Job_Offer_Ontology:Id>
+        <Job_Offer_Ontology:description rdf:datatype="&xsd;string"
+            >Letter + CV to CONTACT EA</Job_Offer_Ontology:description>
+    </Job_Offer_Ontology:How_To_Apply>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Letter_plus_CV_to_Domestic_Adviser -->
+
+    <owl:Thing rdf:about="&Job_Offer_Ontology;Letter_plus_CV_to_Domestic_Adviser">
+        <rdf:type rdf:resource="&Job_Offer_Ontology;How_To_Apply"/>
+        <Job_Offer_Ontology:Id rdf:datatype="&xsd;integer">3</Job_Offer_Ontology:Id>
+        <Job_Offer_Ontology:description rdf:datatype="&xsd;string"
+            >Letter + CV to Domestic Adviser</Job_Offer_Ontology:description>
+    </owl:Thing>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Letter_plus_CV_to_EMPLOYER -->
+
+    <Job_Offer_Ontology:How_To_Apply rdf:about="&Job_Offer_Ontology;Letter_plus_CV_to_EMPLOYER">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <Job_Offer_Ontology:Id rdf:datatype="&xsd;integer">2</Job_Offer_Ontology:Id>
+        <Job_Offer_Ontology:description rdf:datatype="&xsd;string"
+            >Letter + CV to EMPLOYER</Job_Offer_Ontology:description>
+    </Job_Offer_Ontology:How_To_Apply>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Other -->
+
+    <Job_Offer_Ontology:How_To_Apply rdf:about="&Job_Offer_Ontology;Other">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <Job_Offer_Ontology:Id rdf:datatype="&xsd;integer">7</Job_Offer_Ontology:Id>
+        <Job_Offer_Ontology:description rdf:datatype="&xsd;string"
+            >Other - see free text</Job_Offer_Ontology:description>
+    </Job_Offer_Ontology:How_To_Apply>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Telephone_CONTACT_EA -->
+
+    <Job_Offer_Ontology:How_To_Apply rdf:about="&Job_Offer_Ontology;Telephone_CONTACT_EA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <Job_Offer_Ontology:Id rdf:datatype="&xsd;integer">4</Job_Offer_Ontology:Id>
+        <Job_Offer_Ontology:description rdf:datatype="&xsd;string"
+            >Telephone CONTACT EA</Job_Offer_Ontology:description>
+    </Job_Offer_Ontology:How_To_Apply>
+    
+
+
+    <!-- http://mccarthy.dia.fi.upm.es/Job_Offer_Ontology#Telephone_EMPLOYER -->
+
+    <owl:Thing rdf:about="&Job_Offer_Ontology;Telephone_EMPLOYER">
+        <rdf:type rdf:resource="&Job_Offer_Ontology;How_To_Apply"/>
+        <Job_Offer_Ontology:Id rdf:datatype="&xsd;integer">5</Job_Offer_Ontology:Id>
+        <Job_Offer_Ontology:description rdf:datatype="&xsd;string"
+            >Telephone EMPLOYER</Job_Offer_Ontology:description>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
