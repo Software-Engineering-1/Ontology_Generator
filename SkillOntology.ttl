@@ -1,0 +1,867 @@
+@prefix : <http://mccarthy.dia.fi.upm.es/Skill_Ontology#> .
+@prefix Com: <http://mccarthy.dia.fi.upm.es/Competence_Ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Certified
+
+:Certified rdf:type owl:AnnotationProperty ;
+           
+           rdfs:domain :Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Description
+
+:Description rdf:type owl:AnnotationProperty ;
+             
+             rdfs:domain :Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Name
+
+:Name rdf:type owl:AnnotationProperty ;
+      
+      rdfs:domain :Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#weigth
+
+:weigth rdf:type owl:AnnotationProperty ;
+        
+        rdfs:domain :Skill .
+
+
+
+
+
+#################################################################
+#
+#    Datatypes
+#
+#################################################################
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#cloud_computing_skill_type
+
+<http://www.co-ode.org/ontologies/ont.owl#cloud_computing_skill_type> rdf:type rdfs:Datatype ;
+                                                                      
+                                                                      owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                                                                            owl:oneOf [ rdf:type rdf:List ;
+                                                                                                        rdf:first "AWS" ;
+                                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                                   rdf:first "Cassandra" ;
+                                                                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                                                                              rdf:first "Hadoop" ;
+                                                                                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                         rdf:first "MongoDB" ;
+                                                                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                    rdf:first "OpenStack" ;
+                                                                                                                                                    rdf:rest rdf:nil
+                                                                                                                                                  ]
+                                                                                                                                       ]
+                                                                                                                            ]
+                                                                                                                 ]
+                                                                                                      ]
+                                                                                          ] .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#data_skill
+
+<http://www.co-ode.org/ontologies/ont.owl#data_skill> rdf:type rdfs:Datatype ;
+                                                      
+                                                      owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                                                            owl:oneOf [ rdf:type rdf:List ;
+                                                                                        rdf:first "Artificial Intelligence" ;
+                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                   rdf:first "Business Intelligence" ;
+                                                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                                                              rdf:first "Data Visualization" ;
+                                                                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                                                                         rdf:first "Linear Algebra" ;
+                                                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                    rdf:first "Machine Learning" ;
+                                                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                               rdf:first "MySQL" ;
+                                                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                          rdf:first "Predictive Modeling" ;
+                                                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                     rdf:first "Statistics" ;
+                                                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                                                   ]
+                                                                                                                                                        ]
+                                                                                                                                             ]
+                                                                                                                                  ]
+                                                                                                                       ]
+                                                                                                            ]
+                                                                                                 ]
+                                                                                      ]
+                                                                          ] .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#db_language_type
+
+<http://www.co-ode.org/ontologies/ont.owl#db_language_type> rdf:type rdfs:Datatype ;
+                                                            
+                                                            owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                                                                  owl:oneOf [ rdf:type rdf:List ;
+                                                                                              rdf:first "RDQL" ;
+                                                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                                                         rdf:first "SPARQL" ;
+                                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                                    rdf:first "SQL" ;
+                                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                                               rdf:first "WebQL" ;
+                                                                                                                               rdf:rest rdf:nil
+                                                                                                                             ]
+                                                                                                                  ]
+                                                                                                       ]
+                                                                                            ]
+                                                                                ] .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#mobile_computing_skill_type
+
+<http://www.co-ode.org/ontologies/ont.owl#mobile_computing_skill_type> rdf:type rdfs:Datatype ;
+                                                                       
+                                                                       owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                                                                             owl:oneOf [ rdf:type rdf:List ;
+                                                                                                         rdf:first "Android" ;
+                                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                                    rdf:first "J2ME" ;
+                                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                                               rdf:first "Swift" ;
+                                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                          rdf:first "Swift Developer" ;
+                                                                                                                                          rdf:rest rdf:nil
+                                                                                                                                        ]
+                                                                                                                             ]
+                                                                                                                  ]
+                                                                                                       ]
+                                                                                           ] .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#network_skill_type
+
+<http://www.co-ode.org/ontologies/ont.owl#network_skill_type> rdf:type rdfs:Datatype .
+
+
+
+###  http://www.w3.org/2001/XMLSchema#language
+
+xsd:language owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                   owl:oneOf [ rdf:type rdf:List ;
+                                               rdf:first "Bash" ;
+                                               rdf:rest [ rdf:type rdf:List ;
+                                                          rdf:first "C" ;
+                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                     rdf:first "C#" ;
+                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                rdf:first "C++" ;
+                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                           rdf:first "Clojure" ;
+                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                      rdf:first "Go" ;
+                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                 rdf:first "Haskell" ;
+                                                                                                                 rdf:rest [ rdf:type rdf:List ;
+                                                                                                                            rdf:first "Java" ;
+                                                                                                                            rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                       rdf:first "Javascript" ;
+                                                                                                                                       rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                  rdf:first "Objective C" ;
+                                                                                                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                             rdf:first "PHP" ;
+                                                                                                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                        rdf:first "Perl" ;
+                                                                                                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                   rdf:first "Python" ;
+                                                                                                                                                                                   rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                              rdf:first "R" ;
+                                                                                                                                                                                              rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                         rdf:first "Ruby" ;
+                                                                                                                                                                                                         rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                    rdf:first "Scala" ;
+                                                                                                                                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                               rdf:first "TCL" ;
+                                                                                                                                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                                          rdf:first "VB .NET" ;
+                                                                                                                                                                                                                                          rdf:rest rdf:nil
+                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                             ]
+                                                                                                                                                                                                                  ]
+                                                                                                                                                                                                       ]
+                                                                                                                                                                                            ]
+                                                                                                                                                                                 ]
+                                                                                                                                                                      ]
+                                                                                                                                                           ]
+                                                                                                                                                ]
+                                                                                                                                     ]
+                                                                                                                          ]
+                                                                                                               ]
+                                                                                                    ]
+                                                                                         ]
+                                                                              ]
+                                                                   ]
+                                                        ]
+                                             ]
+                                 ] .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Certified
+
+:Certified rdf:type owl:DatatypeProperty ;
+           
+           rdfs:range xsd:boolean .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Description
+
+:Description rdf:type owl:DatatypeProperty ;
+             
+             rdfs:range xsd:string .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Name
+
+:Name rdf:type owl:DatatypeProperty ;
+      
+      rdfs:range xsd:string .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#weigth
+
+:weigth rdf:type owl:DatatypeProperty ;
+        
+        rdfs:range xsd:integer .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#cloud_computing_skill
+
+<http://www.co-ode.org/ontologies/ont.owl#cloud_computing_skill> rdf:type owl:DatatypeProperty ;
+                                                                 
+                                                                 rdfs:range <http://www.co-ode.org/ontologies/ont.owl#cloud_computing_skill_type> .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#data_skill
+
+<http://www.co-ode.org/ontologies/ont.owl#data_skill> rdf:type owl:DatatypeProperty ;
+                                                      
+                                                      rdfs:range <http://www.co-ode.org/ontologies/ont.owl#data_skill> .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#db_language_type
+
+<http://www.co-ode.org/ontologies/ont.owl#db_language_type> rdf:type owl:DatatypeProperty ;
+                                                            
+                                                            rdfs:range <http://www.co-ode.org/ontologies/ont.owl#db_language_type> .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#language
+
+<http://www.co-ode.org/ontologies/ont.owl#language> rdf:type owl:DatatypeProperty ;
+                                                    
+                                                    rdfs:domain :Programming_Language ;
+                                                    
+                                                    rdfs:range xsd:language .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#mobile_computing_skill
+
+<http://www.co-ode.org/ontologies/ont.owl#mobile_computing_skill> rdf:type owl:DatatypeProperty ;
+                                                                  
+                                                                  rdfs:range <http://www.co-ode.org/ontologies/ont.owl#mobile_computing_skill_type> .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#network_skills
+
+<http://www.co-ode.org/ontologies/ont.owl#network_skills> rdf:type owl:DatatypeProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://mccarthy.dia.fi.upm.es/Competence_Ontology#Competence
+
+Com:Competence rdf:type owl:Class .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#A__Certificate
+
+:A__Certificate rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Certificate .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Accounting_Application
+
+:Accounting_Application rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Specific_Application .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Apple_Certificate
+
+:Apple_Certificate rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Certificate .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Apple_Operating_System
+
+:Apple_Operating_System rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Operating_System .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Applications_programming
+
+:Applications_programming rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Artistic_Skill
+
+:Artistic_Skill rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Budget_responsibility
+
+:Budget_responsibility rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Organisational_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#CAD_CAM
+
+:CAD_CAM rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Specific_Application .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#CISCO_Certificate
+
+:CISCO_Certificate rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Certificate ,
+                                   :Network_related .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#CRM_Customer_Relationship_Management
+
+:CRM_Customer_Relationship_Management rdf:type owl:Class ;
+                                      
+                                      rdfs:subClassOf :Organisational_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Certificate
+
+:Certificate rdf:type owl:Class ;
+             
+             rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Communication_protocol
+
+:Communication_protocol rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Network_related .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Components_tecnology_or_library
+
+:Components_tecnology_or_library rdf:type owl:Class .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Computer_technology_specialization_engineer
+
+:Computer_technology_specialization_engineer rdf:type owl:Class ;
+                                             
+                                             rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#DMM_and_Sw_Ing_practices
+
+:DMM_and_Sw_Ing_practices rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#DataBase_administration
+
+:DataBase_administration rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :DataBase_related .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#DataBase_design
+
+:DataBase_design rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :DataBase_related .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#DataBase_development
+
+:DataBase_development rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :DataBase_related .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#DataBase_related
+
+:DataBase_related rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Development_Management_model
+
+:Development_Management_model rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :DMM_and_Sw_Ing_practices .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Distributed_object_technology
+
+:Distributed_object_technology rdf:type owl:Class ;
+                               
+                               rdfs:subClassOf :Components_tecnology_or_library .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#IBM_Certificate
+
+:IBM_Certificate rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Certificate .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#IBM_Operating_System
+
+:IBM_Operating_System rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Operating_System .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#ICT_Skill
+
+:ICT_Skill rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Installation_and_maintenance
+
+:Installation_and_maintenance rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Library
+
+:Library rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Components_tecnology_or_library .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Lotus_Certificate
+
+:Lotus_Certificate rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Certificate .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Microsoft_Certificate
+
+:Microsoft_Certificate rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Certificate .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Negotiating_experience
+
+:Negotiating_experience rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Organisational_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Network_Operating_System
+
+:Network_Operating_System rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Operating_System .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Network_administration
+
+:Network_administration rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Network_related .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Network_related
+
+:Network_related rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Novell_Certificate
+
+:Novell_Certificate rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Certificate ,
+                                    :Network_related .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#OO_practices
+
+:OO_practices rdf:type owl:Class ;
+              
+              rdfs:subClassOf :DMM_and_Sw_Ing_practices .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Office_Suite_Application
+
+:Office_Suite_Application rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Specific_Application .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Operating_System
+
+:Operating_System rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Operational_responsibility_computing
+
+:Operational_responsibility_computing rdf:type owl:Class ;
+                                      
+                                      rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Oracle_Certificate
+
+:Oracle_Certificate rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Certificate .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Organisational_Skill
+
+:Organisational_Skill rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Other_Skill
+
+:Other_Skill rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Programming_Language
+
+:Programming_Language rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Applications_programming .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Project_management_experience
+
+:Project_management_experience rdf:type owl:Class ;
+                               
+                               rdfs:subClassOf :Organisational_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Security
+
+:Security rdf:type owl:Class ;
+          
+          rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Service_documentation_computing
+
+:Service_documentation_computing rdf:type owl:Class ;
+                                 
+                                 rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Skill
+
+:Skill rdf:type owl:Class ;
+       
+       rdfs:subClassOf Com:Competence .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Social_Skill
+
+:Social_Skill rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Specific_Application
+
+:Specific_Application rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Specific_application_development
+
+:Specific_application_development rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Staff_responsibility
+
+:Staff_responsibility rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Organisational_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Sun_Certificate
+
+:Sun_Certificate rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Certificate .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Supervisor_experience
+
+:Supervisor_experience rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Organisational_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Surveillance
+
+:Surveillance rdf:type owl:Class ;
+              
+              rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#System_development
+
+:System_development rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Specific_application_development .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Systems_Task
+
+:Systems_Task rdf:type owl:Class ;
+              
+              rdfs:subClassOf :DMM_and_Sw_Ing_practices .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Technical_Skill
+
+:Technical_Skill rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#UNIX_operating_system
+
+:UNIX_operating_system rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Operating_System .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#User_Support
+
+:User_Support rdf:type owl:Class ;
+              
+              rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Vulnerability_Analysis
+
+:Vulnerability_Analysis rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :DMM_and_Sw_Ing_practices ,
+                                        :Network_related .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Web_related
+
+:Web_related rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Network_related .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Web_server
+
+:Web_server rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Web_related .
+
+
+
+###  http://mccarthy.dia.fi.upm.es/Skill_Ontology#Windows_Operating_System
+
+:Windows_Operating_System rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Operating_System .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Cloud
+
+<http://www.co-ode.org/ontologies/ont.owl#Cloud> rdf:type owl:Class ;
+                                                 
+                                                 rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Domain_Specific_Skills> .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Data_Science
+
+<http://www.co-ode.org/ontologies/ont.owl#Data_Science> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Domain_Specific_Skills> .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Domain_Specific_Skills
+
+<http://www.co-ode.org/ontologies/ont.owl#Domain_Specific_Skills> rdf:type owl:Class ;
+                                                                  
+                                                                  rdfs:subClassOf :ICT_Skill .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Mobile_Computing
+
+<http://www.co-ode.org/ontologies/ont.owl#Mobile_Computing> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#Domain_Specific_Skills> .
+
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#VMware_certificate
+
+<http://www.co-ode.org/ontologies/ont.owl#VMware_certificate> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:subClassOf :Network_related .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
